@@ -8,7 +8,7 @@ on:
 
 env:
     DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-    IMAGE_NAME: m4b-merge  # change if needed
+    IMAGE_NAME: m4b-merge
     M4B_TOOL_DOWNLOAD_LINK: 'https://github.com/sandreas/m4b-tool/releases/download/v0.5.2/m4b-tool-0.5.2.tar.gz'
 
 jobs:
