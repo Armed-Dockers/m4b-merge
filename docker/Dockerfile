@@ -27,8 +27,7 @@ RUN echo "---- INSTALL RUNTIME PACKAGES ----" && \
     && ln -s /usr/bin/php8 /bin/php
 
 # Add gosu for easy step-down from root
-RUN apk add --no-cache --update --upgrade --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
-    gosu
+RUN apk add --no-cache su-exec
 
 # Add ffmpeg, tone, mp4v2 and fdkaac
 COPY --from=ffmpeg /usr/local/bin/ffmpeg /usr/local/bin/
