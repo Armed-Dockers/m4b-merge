@@ -8,4 +8,4 @@ echo "Starting with UID: $USER_ID, GID: $GROUP_ID"
 chown -R "$USER_ID":"$GROUP_ID" /config /input /output
 
 # Run the command as the specified user
-gosu "$USER_ID":"$GROUP_ID" "$@"
+su-exec "$USER_ID":"$GROUP_ID" "$@"
